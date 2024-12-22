@@ -1,0 +1,416 @@
+	<!DOCTYPE html>
+	<html lang="tr" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin: 50px;
+			}
+			h1 {
+            font-size: 20px;
+            text-align: center;
+			}
+			.kapali {
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #3533cd;
+       		}
+			canvas {
+				max-width: 800px;
+				height: 600px;
+				margin: 0 auto;
+			}
+		</style>
+		<!-- Site Title -->
+		<title>Türk Çağdaş Müzesi</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">					
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>
+			<header id="header" id="home">
+				<div class="container header-top">
+					<div class="row">
+						<div class="col-6 top-head-left">
+						</div>
+						<div class="col-6 top-head-right">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</div>			  			
+					</div>
+				</div>
+				<hr>
+			  <div class="container">
+				  <div class="row align-items-center justify-content-between d-flex">
+					<div id="logo">
+					  <a href="index.html"><img src="img/logo.jpg" alt="" title="" style="width: 50px; height: 60px;"/></a>
+					</div>
+					<nav id="nav-menu-container">
+					  <ul class="nav-menu">
+						<li class="menu-active"><a href="index.html">Ana Sayfa</a></li>
+						<li><a href="gallery.html">Galeri</a></li>
+						<li><a href="event.html">Etkinlikler</a></li>
+						<li><a href="duyuru.html">Duyurular</a></li>
+						<li><a href="ticket.html">Ürünler</a></li>
+						<li><a href="about.html">Hakkımızda</a></li>
+						<li><a href="contact.html">İletişim</a></li>
+						<li class="menu-has-children"><a href="elements.html">Birimler</a>
+							<ul>
+								<li><a href="elements.html#1">Yönetim </a></li>
+								<li><a href="elements.html#2">Güvenlik</a></li>
+								<li><a href="elements.html#3">Satış&Pazarlama</a></li>
+							</ul>
+						</li>			          
+					  </ul>
+					</nav><!-- #nav-menu-container -->		    		
+				  </div>
+			  </div>
+			</header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Duyurularımız
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Ana Sayfa </a>  <span class="lnr lnr-arrow-right"></span>  <a href="duyuru.html"> Duyurularımız</a></p>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+
+<!-- Giriş Ücretleri ve Üyelikler Alanı -->
+<section class="upcoming-exibition-area section-gap">
+    <div class="container">
+        <!-- Giriş Ücretleri Başlık -->
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-50 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Giriş Ücretlerimiz</h1>
+                    <p>Kendinize uygun bileti müzemize gelerek sahip olabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Giriş Ücretleri İçerik -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 single-exhibition">
+                <div class="thumb">
+                    <img class="img-fluid" src="img/T1.png" alt="" style="height: 300px; width:100%;">						
+                </div>
+                <h4>Ücretsiz Giriş</h4>
+                <p>Çocuklar, ebeveynleri ile birlikte müzemizin açık olduğu günlerde ücretsiz giriş sağlayabilirler.</p>
+                <div class="meta-bottom d-flex justify-content-start">
+                    <p class="price">0.00 TL</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 single-exhibition">
+                <div class="thumb">
+                    <img class="img-fluid" src="img/T2.png" alt="" style="height: 300px; width:100%;">						
+                </div>
+                <h4>Öğrenci ve 65 Yaş Üstü Giriş</h4>
+                <p>Lise, üniversite ve üzeri öğrenciler ve 65 yaş üzerindeki vatandaşlarımız bu indirimden faydalanabilirler.</p>
+                <div class="meta-bottom d-flex justify-content-start">
+                    <p class="price">50.00 TL</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 single-exhibition">
+                <div class="thumb">
+                    <img class="img-fluid" src="img/T3.png" alt="" style="height: 300px; width:100%;">						
+                </div>
+                <h4>Yetişkin Giriş</h4>
+                <p>Herhangi bir indirimden faydalanamayan ziyaretçilerimiz bu bilet ile giriş yapabilirler.</p>
+                <div class="meta-bottom d-flex justify-content-start">
+                    <p class="price">75.00 TL</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bölüm Ayracı -->
+        <div class="section-divider"> <br><br></div>
+
+        <!-- Üyelikler Başlık -->
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-50 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Üyeliklerimiz</h1>
+                    <p>Kendinize uygun üyeliğe müzemize gelerek sahip olabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Üyelikler İçerik -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 single-exhibition">
+                <div class="thumb">
+                    <img class="img-fluid" src="img/u3.png" alt="" style="height: 300px; width:100%;">						
+                </div>
+                <h4>Ücretsiz Üyelik</h4>
+                <p>0-15 yaş arasındaki çocuklar ve engelli bireyler kimliklerini gösterip müzemizde kayıt oluşturduklarında yıllık üyeliğe sahip olurlar.</p>
+                <div class="meta-bottom d-flex justify-content-start">
+                    <p class="price">20.00 TL (Kart Ücreti)</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 single-exhibition">
+                <div class="thumb">
+                    <img class="img-fluid" src="img/u1.png" alt="" style="height: 300px; width:100%;">						
+                </div>
+                <h4>Öğrenci Üyeliği</h4>
+                <p>Lise, üniversite ve üzeri öğrenciler öğrenci kimliklerini gösterip müzemizde kayıt oluşturduklarında yıllık üyeliğe sahip olurlar.</p>
+                <div class="meta-bottom d-flex justify-content-start">
+                    <p class="price">800.00 TL</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 single-exhibition">
+                <div class="thumb">
+                    <img class="img-fluid" src="img/u2.png" alt="" style="height: 300px; width:100%;">						
+                </div>
+                <h4>Yetişkin Üyeliği</h4>
+                <p>Ziyaretçi vatandaşlarımız TC Kimliklerini gösterip müzemizde kayıt oluşturduklarında yıllık üyeliğe sahip olurlar.</p>
+                <div class="meta-bottom d-flex justify-content-start">
+                    <p class="price">1200.00 TL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="row d-flex justify-content-center mt-5">
+    		<div class="menu-content pb-70 col-lg-8">
+        		<div class="title text-center">
+            		<h1 class="mb-10">Tatil Günlerimiz</h1>
+					<p>
+						Türk Çağdaş Müzesinin kapalı olduğu tatil günleri aşağıdaki takvimde işaretlenmiştir.
+						<br>
+						Müzemiz bu günlerin haricinde her gün 10.00 ile 18.00 arasında hizmet vermektedir.
+					</p>
+        		</div>
+    		</div>
+		</div>
+		<div class="row d-flex justify-content-center" style="margin-top: -20px;">
+    		<div class="col-lg-10 text-center">
+        		<img class="img-fluid" src="img/takvim.png" alt="Tatil Takvimi" style="width: 100%; max-width: 1900px;">
+    		</div>
+		</div>
+    </div>	
+</section>
+<!-- End upcoming-exibition Area -->
+ 
+
+<!-- Grafik Başlangıç-->
+<h1>Haftalık Yoğunluk Grafiği</h1>
+<canvas id="weeklyChart"></canvas>
+<div class="kapali" id="kapaliText" style="display: none;">Kapalı</div>
+
+<script>
+	// Haftanın günleri ve yoğunluk verileri
+	const days = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
+	const densities = [0, 37, 30, 79, 61, 92, 87]; // Pazartesi 0
+
+	// Chart.js ile grafiği oluşturma
+	const ctx = document.getElementById('weeklyChart').getContext('2d');
+	const myChart = new Chart(ctx, {
+		type: 'bar', // Çubuk grafik
+		data: {
+			labels: days,
+			datasets: [{
+				label: 'Yoğunluk',
+				data: densities,
+				backgroundColor: [
+					'#b9b8ff',
+					'#8d8cf3',
+					'#a3a2fc',
+					'#4b49d6',
+					'#7775e9',
+					'#3533cd',
+					'#615fe0'
+				],
+				borderColor: [
+					'#b9b8ff',
+					'#8d8cf3',
+					'#a3a2fc',
+					'#4b49d6',
+					'#7775e9',
+					'#3533cd',
+					'#615fe0'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+                responsive: true,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                if (context.dataIndex === 0 ) {
+                                    return '';
+                                }
+								else {
+                                    return context.raw + ' Yoğunluk';  // Diğer günler için yoğunluk değeri
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Haftalık Yoğunluk Grafiği',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 20
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Yoğunluk Seviyesi',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Haftanın Günleri',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                }
+            }
+        });		
+</script>
+
+<!-- Grafik Bitiş-->
+
+		<!-- Start Footer Area -->
+		<footer class="footer-area section-gap" style="background: #1e1e1e; color: #d3d3d3; font-family: 'Lora', serif; padding: 30px 0;">
+			<div class="container">
+				<div class="row">
+					<!-- Address Section -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="single-footer-widget">
+							<h6 style="color: #88D200; font-size: 18px; font-weight: bold;">Adresimiz</h6>
+							<p style="margin: 0; line-height: 1.8; font-size: 16px;">
+								Mebusevleri, Akdeniz Cd. No:31, 
+								<br>06570 Çankaya/Ankara
+							</p>
+						</div>
+					</div>
+
+					<!-- Contact Section -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="single-footer-widget">
+							<h6 style="color: #88D200; font-size: 18px; font-weight: bold;">İletişim</h6>
+							<p style="margin: 0; font-size: 16px;">
+								Telefon: <a href="tel:+903120606" style="color: #88D200; text-decoration: none;">(0312) 06 06</a>
+							</p>
+							<p style="margin: 5px 0; font-size: 16px;">
+								E-posta: <a href="mailto:turkcagdas@gmail.com" style="color: #88D200; text-decoration: none;">turkcagdas@gmail.com</a>
+							</p>
+						</div>
+					</div>
+
+					<!-- Social Media Section -->
+					<div class="col-lg-4 col-md-12 col-sm-12 social-widget">
+						<div class="single-footer-widget">
+							<h6 style="color: #88D200; font-size: 18px; font-weight: bold;">Bizi Takip Edin</h6>
+							<p style="margin-bottom: 15px; font-size: 16px;">Sosyal Medya Hesaplarımız</p>
+							<div class="footer-social d-flex align-items-center" style="gap: 15px;">
+								<a href="#" style="color: #88D200; font-size: 22px; transition: color 0.3s;">
+									<i class="fa fa-facebook"></i>
+								</a>
+								<a href="#" style="color: #88D200; font-size: 22px; transition: color 0.3s;">
+									<i class="fa fa-twitter"></i>
+								</a>
+								<a href="#" style="color: #88D200; font-size: 22px; transition: color 0.3s;">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer Bottom -->
+				<div class="row" style="margin-top: 30px;">
+					<div class="col-lg-12 text-center">
+						<p style="margin: 0; font-size: 14px; color: #999;">
+							&copy; 2024 Tüm Hakları Saklıdır. <a href="#" style="color: #88D200; text-decoration: none;">Türk Çağdaş Müzesi</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>	
+			<script src="js/imagesloaded.pkgd.min.js"></script>
+			<script src="js/justified.min.js"></script>					
+			<script src="js/jquery.sticky.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>			
+			<script src="js/parallax.min.js"></script>		
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+		</body>
+	</html>

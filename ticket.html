@@ -1,0 +1,492 @@
+	<!DOCTYPE html>
+	<html lang="tr" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Art Museum</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">					
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>
+			<header id="header" id="home">
+				<div class="container header-top">
+					<div class="row">
+						<div class="col-6 top-head-left">
+						</div>
+						<div class="col-6 top-head-right">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</div>			  			
+					</div>
+				</div>
+				<hr>
+			  <div class="container">
+				  <div class="row align-items-center justify-content-between d-flex">
+					<div id="logo">
+					  <a href="index.html"><img src="img/logo.jpg" alt="" title="" style="width: 50px; height: 60px;"/></a>
+					</div>
+					<nav id="nav-menu-container">
+					  <ul class="nav-menu">
+						<li class="menu-active"><a href="index.html">Ana Sayfa</a></li>
+						<li><a href="gallery.html">Galeri</a></li>
+						<li><a href="event.html">Etkinlikler</a></li>
+						<li><a href="duyuru.html">Duyurular</a></li>
+						<li><a href="ticket.html">Ürünler</a></li>
+						<li><a href="about.html">Hakkımızda</a></li>
+						<li><a href="contact.html">İletişim</a></li>
+						<li class="menu-has-children"><a href="elements.html">Birimler</a>
+							<ul>
+								<li><a href="elements.html#1">Yönetim </a></li>
+								<li><a href="elements.html#2">Güvenlik</a></li>
+								<li><a href="elements.html#3">Satış&Pazarlama</a></li>
+							</ul>
+						</li>			          
+					  </ul>
+					</nav><!-- #nav-menu-container -->		    		
+				  </div>
+			  </div>
+			</header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Ürünlerimiz
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Ana Sayfa </a>  <span class="lnr lnr-arrow-right"></span>  <a href="ticket.html"> Ürünlerimiz</a></p>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+
+			<!-- Start upcoming-exibition Area -->
+			<style>
+				.single-exhibition {
+					margin-bottom: 70px; /* Ürünler arasındaki boşluğu arttırmak için */
+				}
+			</style>
+
+			<section class="upcoming-exibition-area section-gap">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Hediyelik Eşyalarımız</h1>
+								<p>Kendinize ve sevdiklerinize müzemizden hatıra kalsın!</p>
+							</div>
+						</div>
+					</div>	
+
+					<div class="row">
+
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/kalem.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>100. Yıl Dolma Kalem</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">2700.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('100. Yıl Dolma Kalem')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img  src="img/kalemlik.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Bez Kalemlik</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">340.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Bez Kalemlik')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img  src="img/defter.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Defter</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">180.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Defter')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/puzzle2.png" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>1000 Parça Puzle "Cehennemim"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">1500.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Puzzle-Cehennemim')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img  src="img/puzzle.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>500 Parça Puzzle "Kapı"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">750.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Puzzle-Kapı')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img  src="img/tablo.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Tablo "Toygartepe'de Sabah"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">15500.00 TL </p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Tablo-Toygartepede Sabah')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/çanta.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Bez El Çantası</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">500.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Bez El Çantası')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/çanta2.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Bez El Çantası</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">500.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Bez El Çantası')">Satın Al</button>
+							</div>                                 
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/tote.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Tote Omuz Çantası</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price" style="margin: 0;">180.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;"  onclick="openModal('Tote Omuz Çantası')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/poster.png" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Poster "Avrupa Birliği</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">195.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Poster-Avrupa Birliği')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/poster1.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Poster "İsimsiz"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">195.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Poster-İsimsiz')">Satın Al</button>
+							</div>                                 
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/kartpostal.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Kartpostal</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price" style="margin: 0;">100.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;"  onclick="openModal('Kartpostal')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/su.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Turuncu Su Şişesi</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Turuncu Su Şişesi')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/su2.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Lacivert Su Şişesi</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Lacivert Su Şişesi')">Satın Al</button>
+							</div>                                 
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/su3.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Mavi Su Şişesi </h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price" style="margin: 0;">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;"  onclick="openModal('Mavi Su Şişesi')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/eşarp.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Eşarp "İsimsiz"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">1200.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Eşarp-İsimsiz')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/eşarp2.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Eşarp "Berliner"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Eşarp-Berliner')">Satın Al</button>
+							</div>                                 
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/eşarp3.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Eşarp "Denizci"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price" style="margin: 0;">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;"  onclick="openModal('Eşarp-Denizci')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/kravat.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Kravat Modelleri</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">720.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Kravat')">Satın Al</button>
+							</div>                                    
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/şal.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Şal "Derin"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;" onclick="openModal('Şal-Derin')">Satın Al</button>
+							</div>                                 
+						</div>
+					
+						<div class="col-lg-4 col-md-6 single-exhibition">
+							<div class="thumb">
+								<img src="img/şal3.jpg" alt="" width="300px" height="200px">                        
+							</div>
+							<h4>Şal "Konstratlar"</h4>
+							<div class="meta-bottom d-flex justify-content-between align-items-center">
+								<p class="price" style="margin: 0;">510.00 TL</p>
+								<button class="primary-btn text-uppercase" style="font-size: 12px; padding: 1px 10px;"  onclick="openModal('Şal-Konstratlar')">Satın Al</button>
+							</div>                                    
+						</div>    
+					</div>
+
+					
+					<!-- Modal -->
+					<div id="purchaseModal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; box-shadow:0 0 10px rgba(0,0,0,0.5); width:400px; max-height:80%; overflow-y:auto;">
+						<button style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer;" onclick="closeModal()">&times;</button>
+						<h2 id="modalTitle">Ödeme Bilgileri</h2>
+						<form onsubmit="handleSubmit(event)">
+							<div class="form-group">
+								<label for="name">Adınız Soyadınız</label>
+								<input type="text" id="name" class="form-control" placeholder="Adınızı giriniz" required>
+							</div>
+							<div class="form-group">
+								<label for="cardNumber">Kart Numarası</label>
+								<input type="text" id="cardNumber" class="form-control" placeholder="Kart numarasını giriniz" maxlength="19" required>
+							</div>
+							<div class="form-group">
+								<label for="expiryDate">Son Kullanma Tarihi (AA/YY)</label>
+								<input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" maxlength="5" required>
+							</div>
+							<div class="form-group">
+								<label for="cvv">CVV</label>
+								<input type="text" id="cvv" class="form-control" placeholder="CVV kodunu giriniz" maxlength="3" required>
+							</div>
+							<button type="submit" class="primary-btn text-uppercase" style="margin-top:10px;">Ödeme Yap</button>
+						</form>
+					</div>
+					
+					
+					<!-- Başarı Mesajı -->
+					<div id="successMessage" style="display:none; position:fixed; top:0; left:50%; transform:translateX(-50%); background:#7bbe00; color:white; padding:10px 20px; border-radius:5px; box-shadow:0 0 5px rgba(0,0,0,0.3); z-index:1000;">
+						Ödemeniz başarıyla tamamlandı!
+					</div>
+					
+					<script>
+						function openModal(productName) {
+							document.getElementById('modalTitle').textContent = productName;
+							document.getElementById('purchaseModal').style.display = 'block';
+						}
+					
+						function closeModal() {
+							document.getElementById('purchaseModal').style.display = 'none';
+						}
+					
+						function handleSubmit(event) {
+							event.preventDefault();
+							closeModal(); // Modalı kapat
+							showSuccessMessage(); // Başarı mesajını göster
+						}
+					
+						function showSuccessMessage() {
+							const successMessage = document.getElementById('successMessage');
+							successMessage.style.display = 'block';
+							setTimeout(() => {
+								successMessage.style.display = 'none';
+							}, 3000); // Mesaj 3 saniye sonra kaybolacak
+						}
+					</script>
+			</section>
+			<!-- End upcoming-exibition Area -->
+			
+			<!-- Start Footer Area -->
+			<footer class="footer-area section-gap" style="background: #1e1e1e; color: #d3d3d3; font-family: 'Lora', serif; padding: 30px 0;">
+				<div class="container">
+					<div class="row">
+						<!-- Address Section -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="single-footer-widget">
+								<h6 style="color: #88D200; font-size: 18px; font-weight: bold;">Adresimiz</h6>
+								<p style="margin: 0; line-height: 1.8; font-size: 16px;">
+									Mebusevleri, Akdeniz Cd. No:31, <br>06570 Çankaya/Ankara
+								</p>
+							</div>
+						</div>
+
+						<!-- Contact Section -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="single-footer-widget">
+								<h6 style="color: #88D200; font-size: 18px; font-weight: bold;">İletişim</h6>
+								<p style="margin: 0; font-size: 16px;">
+									Telefon: <a href="tel:+903120606" style="color: #88D200; text-decoration: none;">(0312) 06 06</a>
+								</p>
+								<p style="margin: 5px 0; font-size: 16px;">
+									E-posta: <a href="mailto:turkcagdas@gmail.com" style="color: #88D200; text-decoration: none;">turkcagdas@gmail.com</a>
+								</p>
+							</div>
+						</div>
+
+						<!-- Social Media Section -->
+						<div class="col-lg-4 col-md-12 col-sm-12 social-widget">
+							<div class="single-footer-widget">
+								<h6 style="color: #88D200; font-size: 18px; font-weight: bold;">Bizi Takip Edin</h6>
+								<p style="margin-bottom: 15px; font-size: 16px;">Sosyal Medya Hesaplarımız</p>
+								<div class="footer-social d-flex align-items-center" style="gap: 15px;">
+									<a href="#" style="color: #88D200; font-size: 22px; transition: color 0.3s;">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a href="#" style="color: #88D200; font-size: 22px; transition: color 0.3s;">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="#" style="color: #88D200; font-size: 22px; transition: color 0.3s;">
+										<i class="fa fa-instagram"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Footer Bottom -->
+					<div class="row" style="margin-top: 30px;">
+						<div class="col-lg-12 text-center">
+							<p style="margin: 0; font-size: 14px; color: #999;">
+								&copy; 2024 Tüm Hakları Saklıdır. <a href="#" style="color: #88D200; text-decoration: none;">Türk Çağdaş Müzesi</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End Footer Area -->
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>	
+			<script src="js/imagesloaded.pkgd.min.js"></script>
+			<script src="js/justified.min.js"></script>					
+			<script src="js/jquery.sticky.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>			
+			<script src="js/parallax.min.js"></script>		
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+		</body>
+	</html>
