@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müze Admin Paneli</title>
+    <script>
+        // Yeni satır ekleme
+        function addRow(sectionId) {
+            const table = document.querySelector(`#${sectionId} table tbody`);
+            const newRow = document.createElement('tr');
+    
+            newRow.innerHTML = `
+                <td><input type="text" placeholder="Başlık" /></td>
+                <td><input type="text" placeholder="Açıklama" /></td>
+                <td>
+                    <input type="file" accept="image/*" onchange="previewImage(this)" />
+                    <div class="image-preview">
+                         <img src="" alt="Resim önizleme" style="max-width: 100px; display: none;" />
+                    </div>
+                </td> 
+                <td><input type="date" /></td>
+                <td>
+                    <button onclick="saveRow(this)">Kaydet</button>
+                    <button onclick="deleteRow(this)">Sil</button>
+                </td>
+            `;
+    
+            table.appendChild(newRow);
+        }
+    
+        // Satırı kaydetme
+        function saveRow(button) {
+            const row = button.parentElement.parentElement;
+            const inputs = row.querySelectorAll('input');
+    
+            if (inputs[0].value && inputs[1].value && inputs[2].value && inputs[3].value)  {
+                row.innerHTML = `
+                    <td>${inputs[0].value}</td>
+                    <td>${inputs[1].value}</td>
+                    <td>${inputs[2].value}</td>
+                    <td>${inputs[3].value}</td>
+                    <td>
+                        <button onclick="editRow(this)">Düzenle</button>
+                        <button onclick="deleteRow(this)">Sil</button>
+                    </td>
+                `;
+            } else {
+                alert("Lütfen tüm alanları doldurun!");
+            }
+        }
+    
+        function editRow(button) {
+        const row = button.parentNode.parentNode;
+        const title = row.cells[0].innerText;
+        const description = row.cells[1].innerText;
+        const imageSrc = row.cells[2].querySelector('img') ? row.cells[2].querySelector('img').src : '';
+        const date = row.cells[3].innerText;
+
+        const newTitle = prompt("Başlık", title);
+        const newDescription = prompt("Açıklama", description);
+        const newDate = prompt("Tarih", date);
+        const newImage = prompt("Fotoğraf URL'sini girin (Boş bırakmak için Enter'a basın):", imageSrc);
+
+        // Düzenlenen değerleri tabloya geri yaz
+        if (newTitle) row.cells[0].innerText = newTitle;
+        if (newDescription) row.cells[1].innerText = newDescription;
+        if (newDate) row.cells[3].innerText = newDate;
+
+        if (newImage) {
+            const imgElement = row.cells[2].querySelector('img');
+            if (imgElement) {
+                imgElement.src = newImage;
+            } else {
+                // Eğer fotoğraf yoksa, yeni fotoğraf ekle
+                const newImgElement = document.createElement('img');
+                newImgElement.src = newImage;
+                newImgElement.style.maxWidth = "100px";
+                row.cells[2].appendChild(newImgElement);
+            }
+        }
+
+    }
+    
+        // Sil butonunun işlevi
+    function deleteRow(button) {
+        const row = button.parentNode.parentNode;
+        const isConfirmed = confirm("Bu satırı silmek istediğinizden emin misiniz?");
+        if (isConfirmed) {
+            row.remove();
+        }
+    }
+
+    function logout() {
+            if (confirm("Çıkış yapmak istediğinize emin misiniz?")) {
+                window.location.href = "admin giriş.html"; // Giriş sayfasına yönlendirme
+            }
+        }
+        function previewImage(input) {
+            const previewContainer = input.nextElementSibling;
+            const previewImage = previewContainer.querySelector('img');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = "block";
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                previewImage.src = "";
+                previewImage.style.display = "none";
+            }
+        }
+</script>
+    
+    
+    <style>
+        
+        /* Genel Stiller */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        .admin-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .section h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+
+        .logout-btn {
+        background-color: #e74c3c; /* Kırmızı renk */
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+    }
+
+    .logout-btn:hover {
+        background-color: #c0392b; 
+    }
+    </style>    
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div>
+            <h2>Türk Çağdaş Müzesi Paneli</h2>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">Fotoğraf Galerisi</a></li>
+                    <li><a href="#exhibitions">Sergiler</a></li>
+                    <li><a href="#films">Kısa Filmler</a></li>
+                    <li><a href="#announcements">Duyurular</a></li>
+                </ul>
+            </nav>
+            </div>
+                <a href="javascript:void(0)" class="logout-btn" onclick="logout()">Çıkış Yap</a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Fotoğraf Galerisi -->
+            <section id="gallery" class="section">
+                <h1>Fotoğraf Galerisi</h1>
+                <button class="btn" onclick="addRow('gallery')">+ Yeni Fotoğraf Ekle</button>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Başlık</th>
+                            <th>Açıklama</th>
+                            <th>Fotoğraf</th>
+                            <th>Tarih</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Galeri Açılışı</td>
+                            <td>Müzenin ilk açılış fotoğrafları</td>
+                            <td>
+                                <input type="file" accept="image/*" onchange="previewImage(this)" />
+                                <div class="image-preview" style="margin-top: 10px;">
+                                    <img src="" alt="Önizleme" style="max-width: 100px; display: none;" />
+                                </div>
+                            </td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <button onclick="editRow(this)">Düzenle</button>
+                                <button onclick="deleteRow(this)">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Sergiler -->
+            <section id="exhibitions" class="section">
+                <h1>Sergiler</h1>
+                <button class="btn" onclick="addRow('exhibitions')">+ Yeni Sergi Ekle</button>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Başlık</th>
+                            <th>Açıklama</th>
+                            <th>Fotoğraf</th>
+                            <th>Tarih</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modern Sanat</td>
+                            <td>Sanat eserleri sergisi</td>
+                            <td>
+                                <input type="file" accept="image/*" onchange="previewImage(this)" />
+                                <div class="image-preview" style="margin-top: 10px;">
+                                    <img src="" alt="Önizleme" style="max-width: 100px; display: none;" />
+                                </div>
+                            </td>
+                            <td>15/12/2024</td>
+                            <td>
+                                <button onclick="editRow(this)">Düzenle</button>
+                                <button onclick="deleteRow(this)">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Kısa Filmler -->
+            <section id="films" class="section">
+                <h1>Kısa Filmler</h1>
+                <button class="btn" onclick="addRow('films')">+ Yeni Film Ekle</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Başlık</th>
+                            <th>Açıklama</th>
+                            <th>Fotoğraf</th>
+                            <th>Tarih</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sanatın İzleri</td>
+                            <td>Sanat tarihine kısa bir bakış</td>
+                            <td>
+                                <input type="file" accept="image/*" onchange="previewImage(this)" />
+                                <div class="image-preview" style="margin-top: 10px;">
+                                    <img src="" alt="Önizleme" style="max-width: 100px; display: none;" />
+                                </div>
+                            </td>
+                            <td>20/12/2024</td>
+                            <td>
+                                <button onclick="editRow(this)">Düzenle</button>
+                                <button onclick="deleteRow(this)">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Duyurular -->
+            <section id="announcements" class="section">
+                <h1>Duyurular</h1>
+                <button class="btn" onclick="addRow('announcements')">+ Yeni Duyuru Ekle</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Başlık</th>
+                            <th>İçerik</th>
+                            <th>Fotoğraf</th>
+                            <th>Tarih</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yılbaşı Tatili</td>
+                            <td>Müze yılbaşında kapalı olacaktır.</td>
+                            <td>
+                                <input type="file" accept="image/*" onchange="previewImage(this)" />
+                                <div class="image-preview" style="margin-top: 10px;">
+                                    <img src="" alt="Önizleme" style="max-width: 100px; display: none;" />
+                                </div>
+                            </td>
+                            <td>25/12/2024</td>
+                            <td>
+                                <button onclick="editRow(this)">Düzenle</button>
+                                <button onclick="deleteRow(this)">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

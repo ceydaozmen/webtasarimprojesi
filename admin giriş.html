@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Giriş - Türk Çağdaş Müzesi</title>
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: white;
+            width: 400px;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .login-container p {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-container input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #2980b9;
+        }
+
+        .login-container .footer-text {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Admin Girişi</h1>
+        <p>Türk Çağdaş Müzesi Yönetim Paneline Hoş Geldiniz</p>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="password" placeholder="Şifre" required>
+            <button type="button" onclick="validateLogin()">Giriş Yap</button>
+        </form>
+        <div class="footer-text">
+            © 2024 Türk Çağdaş Müzesi
+        </div>
+    </div>
+
+    <script>
+        // Sabit kullanıcı adı ve şifre
+        const validUsername = "admin";
+        const validPassword = "12345";
+
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === validUsername && password === validPassword) {
+                alert("Başarılı giriş! Admin paneline yönlendiriliyorsunuz.");
+                window.location.href = "admin panel.html"; // Admin panel sayfasına yönlendirme
+            } else {
+                alert("Kullanıcı adı veya şifre hatalı! Lütfen tekrar deneyin.");
+            }
+        }
+    </script>
+</body>
+</html>
