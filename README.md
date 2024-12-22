@@ -13,7 +13,15 @@ Bu projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izle
    ```bash
    git clone <proje-repo-linki>
    ```
-2. İndirdiğiniz klasörde index.html dosyasını bir tarayıcıda açarak siteyi görüntüleyebilirsiniz.
+   
+2. Proje dizinine gidin:
+   ```bash
+   cd <proje-dizini>
+   ```
+3. Siteyi varsıyalan tarayıcından açmak için:
+    ```bash
+   start index.html
+   ```
 
 
 ### *Proje Hakkında*
