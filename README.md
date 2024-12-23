@@ -76,7 +76,10 @@ Web sitesi 9 ana sayfadan oluşmaktadır:
 **js/:** JavaScript dosyaları
 
 
-##Proje Sahibi
+## Proje Sahibi
+
 **Ad Soyad:** Ceyda ÖZMEN
+
 **Bölüm:** Kocaeli Üniversitesi - Bilişim Sistemleri Mühendisliği
+
 **Sınıf:** 3. Sınıf
