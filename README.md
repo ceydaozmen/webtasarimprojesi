@@ -19,13 +19,13 @@ Bu projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izle
    git clone https://github.com/ceydaozmen/webtasarimprojesi.git
    ```
 2. Proje dizinine gidin:
-   bash
+   ```bash
    cd <proje-dizini>
-   
+   ```
 3. Siteyi varsıyalan tarayıcından açmak için:
-    bash
+   ```bash
    start index.html
-
+   ```
 
 ### *Site İçeriği ve Sayfalar*
 Web sitesi 9 ana sayfadan oluşmaktadır:
